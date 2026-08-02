@@ -103,34 +103,40 @@
 
     let currentLanguage = getSavedLanguage() === "en" ? "en" : defaultLanguage;
 
-    const translate = (key) => translations[currentLanguage][key] ?? translations[defaultLanguage][key] ?? key;
+    const translate = (key) => translations[currentLanguage][key] ?? translations[defaultLanguage][key] ?? "";
 
     const applyLanguage = (language, persist = false) => {
         currentLanguage = language === "en" ? "en" : defaultLanguage;
         document.documentElement.lang = currentLanguage === "en" ? "en" : "pt-BR";
 
         document.querySelectorAll("[data-i18n]").forEach((element) => {
-            element.textContent = translate(element.dataset.i18n);
+            const translatedText = translate(element.dataset.i18n);
+            if (translatedText) element.textContent = translatedText;
         });
         document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
-            element.setAttribute("aria-label", translate(element.dataset.i18nAriaLabel));
+            const translatedLabel = translate(element.dataset.i18nAriaLabel);
+            if (translatedLabel) element.setAttribute("aria-label", translatedLabel);
         });
         document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
-            element.setAttribute("alt", translate(element.dataset.i18nAlt));
+            const translatedAlt = translate(element.dataset.i18nAlt);
+            if (translatedAlt) element.setAttribute("alt", translatedAlt);
         });
         document.querySelectorAll("[data-i18n-content]").forEach((element) => {
-            element.setAttribute("content", translate(element.dataset.i18nContent));
+            const translatedContent = translate(element.dataset.i18nContent);
+            if (translatedContent) element.setAttribute("content", translatedContent);
         });
 
-        document.title = translate("meta.title");
+        const translatedTitle = translate("meta.title");
+        if (translatedTitle) document.title = translatedTitle;
 
         const button = document.querySelector(".language-toggle");
         if (button) {
             const isEnglish = currentLanguage === "en";
             button.setAttribute("aria-pressed", String(isEnglish));
-            button.setAttribute("aria-label", translate(isEnglish
+            const translatedLabel = translate(isEnglish
                 ? "language.changeToPortuguese"
-                : "language.changeToEnglish"));
+                : "language.changeToEnglish");
+            if (translatedLabel) button.setAttribute("aria-label", translatedLabel);
             button.querySelectorAll("[data-language-option]").forEach((option) => {
                 option.classList.toggle("is-active", option.dataset.languageOption === currentLanguage);
             });
