@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Alexander Revoredo, desenvolvedor em aprendizado.">
+    <title>Alexander Revoredo | Portfólio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/theme.js"></script>
+    <script src="/js/tabs.js" defer></script>
+</head>
+<body>
+    <header class="hero">
+        <nav class="navigation" aria-label="Navegação principal">
+            <a class="profile-link" href="/" aria-label="Página inicial de Alexander Revoredo">
+                <img class="profile-avatar" src="/images/alexander-revoredo.jpg" alt="Foto de Alexander Revoredo">
+            </a>
+            <div class="navigation-actions">
+                <a class="menu-link" href="#sobre">Sobre</a>
+                <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Ativar modo escuro">
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                    <span class="theme-label">Modo escuro</span>
+                </button>
+                <a class="github-link" href="https://github.com/AlexanderRevoredo" target="_blank" rel="noopener noreferrer">
+                    GitHub <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <p class="eyebrow">Olá, eu sou</p>
+            <h1>Alexander Revoredo</h1>
+            <p class="introduction">
+                Estou construindo meu caminho no desenvolvimento de software e este é o espaço onde vou compartilhar
+                o que aprendo, crio e descubro ao longo dessa jornada.
+            </p>
+            <a class="primary-button" href="#projetos">Conheça meu portfólio</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="about" id="sobre" aria-labelledby="about-title">
+            <div class="about-card">
+                <p class="eyebrow">Sobre</p>
+                <h2 id="about-title">Formação e foco atual</h2>
+                <p>
+                    Desde criança, sou fascinado por computadores. Na adolescência, montava e desmontava máquinas para
+                    entender melhor como os sistemas funcionavam. Hoje, estou no quinto período de Engenharia de
+                    Software, sou formado em Ciências Contábeis e direciono meu foco ao backend com Java, à criação de
+                    APIs e a sistemas robustos. Também tenho a cibersegurança como interesse complementar.
+                </p>
+            </div>
+        </section>
+
+        <section class="projects" id="projetos" aria-labelledby="projects-title">
+            <div class="section-heading">
+                <p class="eyebrow">Portfólio</p>
+                <h2 id="projects-title">Aprendizado colocado em prática</h2>
+            </div>
+
+            <div class="tabs" data-tabs>
+                <div class="tab-list" role="tablist" aria-label="Categorias do portfólio">
+                    <button class="tab-button" id="personal-projects-tab" type="button" role="tab"
+                            aria-selected="true" aria-controls="personal-projects-panel" tabindex="0">
+                        Projetos pessoais
+                    </button>
+                    <button class="tab-button" id="technical-challenges-tab" type="button" role="tab"
+                            aria-selected="false" aria-controls="technical-challenges-panel" tabindex="-1">
+                        Desafios técnicos
+                    </button>
+                </div>
+
+                <article class="project-placeholder tab-panel" id="personal-projects-panel" role="tabpanel"
+                         aria-labelledby="personal-projects-tab" tabindex="0">
+                    <div class="placeholder-icon" aria-hidden="true">&lt;/&gt;</div>
+                    <div>
+                        <h3>Projetos pessoais aparecerão aqui</h3>
+                        <p>
+                            Este espaço será preenchido conforme eu criar projetos próprios para praticar tecnologias,
+                            explorar ideias e registrar o que aprendi em cada experiência.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-placeholder tab-panel" id="technical-challenges-panel" role="tabpanel"
+                         aria-labelledby="technical-challenges-tab" tabindex="0" hidden>
+                    <div class="placeholder-icon" aria-hidden="true">✓</div>
+                    <div>
+                        <h3>Desafios técnicos aparecerão aqui</h3>
+                        <p>
+                            Esta área poderá apresentar soluções para desafios práticos propostos por empresas em
+                            processos seletivos, atuais ou antigos, como demonstração de habilidade — sem indicar
+                            aprovação ou contratação.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito com dedicação e vontade de aprender.</p>
+        <a href="https://github.com/AlexanderRevoredo" target="_blank" rel="noopener noreferrer">Ver perfil no GitHub</a>
+    </footer>
+</body>
+</html>
