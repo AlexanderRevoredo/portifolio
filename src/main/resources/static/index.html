@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Alexander Revoredo, desenvolvedor em aprendizado.">
+    <meta name="description" content="Portfólio de Alexander Revoredo, desenvolvedor em aprendizado." data-i18n-content="meta.description">
     <title>Alexander Revoredo | Portfólio</title>
     <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/i18n.js"></script>
     <script src="/js/theme.js"></script>
     <script src="/js/tabs.js" defer></script>
 </head>
 <body>
     <header class="hero">
-        <nav class="navigation" aria-label="Navegação principal">
-            <a class="profile-link" href="/" aria-label="Página inicial de Alexander Revoredo">
-                <img class="profile-avatar" src="/images/alexander-revoredo.jpg" alt="Foto de Alexander Revoredo">
+        <nav class="navigation" aria-label="Navegação principal" data-i18n-aria-label="nav.main">
+            <a class="profile-link" href="/" aria-label="Página inicial de Alexander Revoredo" data-i18n-aria-label="nav.home">
+                <img class="profile-avatar" src="/images/alexander-revoredo.jpg" alt="Foto de Alexander Revoredo" data-i18n-alt="nav.photoAlt">
             </a>
             <div class="navigation-actions">
-                <a class="menu-link" href="#sobre">Sobre</a>
+                <a class="menu-link" href="#sobre" data-i18n="nav.about">Sobre</a>
+                <button class="language-toggle" type="button" aria-pressed="false" aria-label="Mudar idioma para inglês">
+                    <span class="language-option is-active" data-language-option="pt">PT</span>
+                    <span aria-hidden="true">/</span>
+                    <span class="language-option" data-language-option="en">EN</span>
+                </button>
                 <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Ativar modo escuro">
                     <span class="theme-icon" aria-hidden="true">☾</span>
                     <span class="theme-label">Modo escuro</span>
@@ -28,22 +34,22 @@
         </nav>
 
         <div class="hero-content">
-            <p class="eyebrow">Olá, eu sou</p>
+            <p class="eyebrow" data-i18n="hero.eyebrow">Olá, eu sou</p>
             <h1>Alexander Revoredo</h1>
-            <p class="introduction">
+            <p class="introduction" data-i18n="hero.introduction">
                 Estou construindo meu caminho no desenvolvimento de software e este é o espaço onde vou compartilhar
                 o que aprendo, crio e descubro ao longo dessa jornada.
             </p>
-            <a class="primary-button" href="#projetos">Conheça meu portfólio</a>
+            <a class="primary-button" href="#projetos" data-i18n="hero.cta">Conheça meu portfólio</a>
         </div>
     </header>
 
     <main>
         <section class="about" id="sobre" aria-labelledby="about-title">
             <div class="about-card">
-                <p class="eyebrow">Sobre</p>
-                <h2 id="about-title">Formação e foco atual</h2>
-                <p>
+                <p class="eyebrow" data-i18n="about.eyebrow">Sobre</p>
+                <h2 id="about-title" data-i18n="about.title">Formação e foco atual</h2>
+                <p data-i18n="about.body">
                     Desde criança, sou fascinado por computadores. Na adolescência, montava e desmontava máquinas para
                     entender melhor como os sistemas funcionavam. Hoje, estou no quinto período de Engenharia de
                     Software, sou formado em Ciências Contábeis e direciono meu foco ao backend com Java, à criação de
@@ -54,18 +60,18 @@
 
         <section class="projects" id="projetos" aria-labelledby="projects-title">
             <div class="section-heading">
-                <p class="eyebrow">Portfólio</p>
-                <h2 id="projects-title">Aprendizado colocado em prática</h2>
+                <p class="eyebrow" data-i18n="projects.eyebrow">Portfólio</p>
+                <h2 id="projects-title" data-i18n="projects.title">Aprendizado colocado em prática</h2>
             </div>
 
             <div class="tabs" data-tabs>
-                <div class="tab-list" role="tablist" aria-label="Categorias do portfólio">
+                <div class="tab-list" role="tablist" aria-label="Categorias do portfólio" data-i18n-aria-label="projects.tabsLabel">
                     <button class="tab-button" id="personal-projects-tab" type="button" role="tab"
-                            aria-selected="true" aria-controls="personal-projects-panel" tabindex="0">
+                            aria-selected="true" aria-controls="personal-projects-panel" tabindex="0" data-i18n="projects.personalTab">
                         Projetos pessoais
                     </button>
                     <button class="tab-button" id="technical-challenges-tab" type="button" role="tab"
-                            aria-selected="false" aria-controls="technical-challenges-panel" tabindex="-1">
+                            aria-selected="false" aria-controls="technical-challenges-panel" tabindex="-1" data-i18n="projects.challengesTab">
                         Desafios técnicos
                     </button>
                 </div>
@@ -74,8 +80,8 @@
                          aria-labelledby="personal-projects-tab" tabindex="0">
                     <div class="placeholder-icon" aria-hidden="true">&lt;/&gt;</div>
                     <div>
-                        <h3>Projetos pessoais aparecerão aqui</h3>
-                        <p>
+                        <h3 data-i18n="projects.personalTitle">Projetos pessoais aparecerão aqui</h3>
+                        <p data-i18n="projects.personalBody">
                             Este espaço será preenchido conforme eu criar projetos próprios para praticar tecnologias,
                             explorar ideias e registrar o que aprendi em cada experiência.
                         </p>
@@ -86,8 +92,8 @@
                          aria-labelledby="technical-challenges-tab" tabindex="0" hidden>
                     <div class="placeholder-icon" aria-hidden="true">✓</div>
                     <div>
-                        <h3>Desafios técnicos aparecerão aqui</h3>
-                        <p>
+                        <h3 data-i18n="projects.challengesTitle">Desafios técnicos aparecerão aqui</h3>
+                        <p data-i18n="projects.challengesBody">
                             Esta área poderá apresentar soluções para desafios práticos propostos por empresas em
                             processos seletivos, atuais ou antigos, como demonstração de habilidade — sem indicar
                             aprovação ou contratação.
@@ -98,9 +104,29 @@
         </section>
     </main>
 
-    <footer>
-        <p>Feito com dedicação e vontade de aprender.</p>
-        <a href="https://github.com/AlexanderRevoredo" target="_blank" rel="noopener noreferrer">Ver perfil no GitHub</a>
+    <footer class="site-footer" id="contato" aria-labelledby="contact-title">
+        <div class="contact-content">
+            <div>
+                <p class="eyebrow" data-i18n="contact.eyebrow">Contato</p>
+                <h2 id="contact-title" data-i18n="contact.title">Vamos conversar?</h2>
+                <p class="contact-introduction" data-i18n="contact.introduction">Você pode me encontrar por e-mail ou pelas redes abaixo.</p>
+            </div>
+
+            <address class="contact-links">
+                <a href="mailto:alexanderrevoredo@gmail.com">alexanderrevoredo@gmail.com</a>
+                <a href="https://www.instagram.com/alex.revolkov/" target="_blank" rel="noopener noreferrer">
+                    <span data-i18n="contact.instagram">Instagram</span> <span aria-hidden="true">↗</span>
+                </a>
+                <a href="https://github.com/AlexanderRevoredo" target="_blank" rel="noopener noreferrer">
+                    <span data-i18n="contact.github">GitHub</span> <span aria-hidden="true">↗</span>
+                </a>
+            </address>
+        </div>
+
+        <div class="footer-note">
+            <p class="footer-copyright" data-i18n="footer.copyright">© 2026 Alexander Revoredo</p>
+            <p class="footer-signature" data-i18n="footer.note">Feito com dedicação e vontade de aprender.</p>
+        </div>
     </footer>
 </body>
 </html>

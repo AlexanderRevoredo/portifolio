@@ -30,10 +30,15 @@
 
         const updateButton = (theme) => {
             const isDark = theme === "dark";
+            const translate = window.PortfolioI18n?.translate;
             button.setAttribute("aria-pressed", String(isDark));
-            button.setAttribute("aria-label", isDark ? "Ativar modo claro" : "Ativar modo escuro");
+            button.setAttribute("aria-label", translate
+                ? translate(isDark ? "theme.activateLight" : "theme.activateDark")
+                : (isDark ? "Ativar modo claro" : "Ativar modo escuro"));
             button.querySelector(".theme-icon").textContent = isDark ? "☀" : "☾";
-            button.querySelector(".theme-label").textContent = isDark ? "Modo claro" : "Modo escuro";
+            button.querySelector(".theme-label").textContent = translate
+                ? translate(isDark ? "theme.light" : "theme.dark")
+                : (isDark ? "Modo claro" : "Modo escuro");
         };
 
         updateButton(initialTheme);
@@ -43,6 +48,10 @@
             document.documentElement.dataset.theme = nextTheme;
             saveTheme(nextTheme);
             updateButton(nextTheme);
+        });
+
+        document.addEventListener("portfolio:languagechange", () => {
+            updateButton(document.documentElement.dataset.theme);
         });
     });
 })();
