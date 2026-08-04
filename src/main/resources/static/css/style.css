@@ -384,8 +384,44 @@ h2 {
 }
 
 .project-placeholder p {
-    margin-bottom: 0;
+    margin-bottom: 0.9rem;
     color: var(--muted);
+}
+
+.project-placeholder p:last-child {
+    margin-bottom: 0;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+
+.project-tags li {
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    background: var(--icon-background);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+    text-decoration: underline;
 }
 
 .site-footer {
