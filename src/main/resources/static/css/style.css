@@ -354,6 +354,17 @@ h2 {
     box-shadow: var(--shadow);
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.projects-grid .project-placeholder {
+    height: 100%;
+}
+
 .project-placeholder > div:last-child {
     min-width: 0;
 }
