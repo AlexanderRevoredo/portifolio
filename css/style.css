@@ -421,6 +421,18 @@ h2 {
     font-weight: 600;
 }
 
+.project-placeholder--media {
+    grid-template-columns: 1fr;
+}
+
+.project-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.9rem;
+    border: 1px solid var(--border);
+}
+
 .project-link {
     display: inline-flex;
     align-items: center;
