@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio de Alexander Revoredo, desenvolvedor em aprendizado." data-i18n-content="meta.description">
     <title>Alexander Revoredo | Portfólio</title>
+    <link rel="icon" href="/images/alexander-revoredo.jpg">
+    <meta name="theme-color" content="#f6f7fb">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/i18n.js?v=20260802-3"></script>
     <script src="/js/theme.js"></script>
     <script src="/js/tabs.js" defer></script>
+    <script src="/js/carousel.js" defer></script>
+    <script src="/js/reveal.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#conteudo" data-i18n="a11y.skipToContent">Pular para o conteúdo</a>
     <header class="hero">
         <nav class="navigation" aria-label="Navegação principal" data-i18n-aria-label="nav.main">
             <a class="profile-link" href="/" aria-label="Página inicial de Alexander Revoredo" data-i18n-aria-label="nav.home">
@@ -28,7 +33,7 @@
                     <span class="theme-label">Modo escuro</span>
                 </button>
                 <a class="github-link" href="https://github.com/AlexanderRevoredo" target="_blank" rel="noopener noreferrer">
-                    GitHub <span aria-hidden="true">↗</span>
+                    GitHub <span class="link-arrow" aria-hidden="true">↗</span>
                 </a>
             </div>
         </nav>
@@ -48,9 +53,9 @@
         </div>
     </header>
 
-    <main>
+    <main id="conteudo">
         <section class="about" id="sobre" aria-labelledby="about-title">
-            <div class="about-card">
+            <div class="about-card" data-reveal>
                 <p class="eyebrow" data-i18n="about.eyebrow">Sobre</p>
                 <h2 id="about-title" data-i18n="about.title">Formação e foco atual</h2>
                 <p data-i18n="about.body">
@@ -83,7 +88,7 @@
                 <div class="tab-panel" id="personal-projects-panel" role="tabpanel"
                      aria-labelledby="personal-projects-tab" tabindex="0">
                     <div class="projects-grid">
-                        <article class="project-placeholder">
+                        <article class="project-placeholder" data-reveal>
                             <div class="placeholder-icon" aria-hidden="true">&lt;/&gt;</div>
                             <div>
                                 <h3 data-i18n="projects.vault.title">Revolkov Vault</h3>
@@ -99,13 +104,40 @@
                                 </ul>
                                 <a class="project-link" href="https://github.com/AlexanderRevoredo/Revolkov-vault" target="_blank" rel="noopener noreferrer"
                                    aria-label="Repositório do Revolkov Vault no GitHub (abre em uma nova aba)" data-i18n-aria-label="projects.vault.linkLabel">
-                                    <span data-i18n="projects.vault.link">Ver repositório</span> <span aria-hidden="true">↗</span>
+                                    <span data-i18n="projects.vault.link">Ver repositório</span> <span class="link-arrow" aria-hidden="true">↗</span>
                                 </a>
                             </div>
                         </article>
 
-                        <article class="project-placeholder">
-                            <div class="placeholder-icon" aria-hidden="true">⌂</div>
+                        <article class="project-placeholder project-placeholder--media" data-reveal>
+                            <div class="project-carousel" data-carousel>
+                                <ul class="project-carousel-track">
+                                    <li class="project-carousel-slide is-active">
+                                        <img src="/images/revolkov-home-1.webp" loading="lazy" decoding="async"
+                                             alt="Captura de tela do Revolkov Home com plano de fundo futurista" data-i18n-alt="projects.home.image1Alt">
+                                    </li>
+                                    <li class="project-carousel-slide">
+                                        <img src="/images/revolkov-home-2.webp" loading="lazy" decoding="async"
+                                             alt="Captura de tela do Revolkov Home com plano de fundo de anime" data-i18n-alt="projects.home.image2Alt">
+                                    </li>
+                                    <li class="project-carousel-slide">
+                                        <img src="/images/revolkov-home-3.webp" loading="lazy" decoding="async"
+                                             alt="Captura de tela do Revolkov Home com plano de fundo de central de monitores" data-i18n-alt="projects.home.image3Alt">
+                                    </li>
+                                </ul>
+                                <button type="button" class="carousel-control carousel-control--prev"
+                                        aria-label="Imagem anterior" data-i18n-aria-label="projects.carousel.prevLabel">‹</button>
+                                <button type="button" class="carousel-control carousel-control--next"
+                                        aria-label="Próxima imagem" data-i18n-aria-label="projects.carousel.nextLabel">›</button>
+                                <div class="carousel-dots">
+                                    <button type="button" class="carousel-dot is-active" data-index="0"
+                                            aria-label="Ver imagem 1 de 3" data-i18n-aria-label="projects.carousel.dot1"></button>
+                                    <button type="button" class="carousel-dot" data-index="1"
+                                            aria-label="Ver imagem 2 de 3" data-i18n-aria-label="projects.carousel.dot2"></button>
+                                    <button type="button" class="carousel-dot" data-index="2"
+                                            aria-label="Ver imagem 3 de 3" data-i18n-aria-label="projects.carousel.dot3"></button>
+                                </div>
+                            </div>
                             <div>
                                 <h3 data-i18n="projects.home.title">Revolkov Home</h3>
                                 <p data-i18n="projects.home.body">
@@ -114,13 +146,13 @@
                                 </p>
                                 <a class="project-link" href="https://github.com/AlexanderRevoredo/revolkov-Home" target="_blank" rel="noopener noreferrer"
                                    aria-label="Repositório do Revolkov Home no GitHub (abre em uma nova aba)" data-i18n-aria-label="projects.home.linkLabel">
-                                    <span data-i18n="projects.home.link">Ver repositório</span> <span aria-hidden="true">↗</span>
+                                    <span data-i18n="projects.home.link">Ver repositório</span> <span class="link-arrow" aria-hidden="true">↗</span>
                                 </a>
                             </div>
                         </article>
 
-                        <article class="project-placeholder project-placeholder--media">
-                            <img class="project-thumbnail" src="/images/fear-quiz.webp"
+                        <article class="project-placeholder project-placeholder--media" data-reveal>
+                            <img class="project-thumbnail" src="/images/fear-quiz.webp" loading="lazy" decoding="async"
                                  alt="Captura de tela do Fear Quiz" data-i18n-alt="projects.fearQuiz.imageAlt">
                             <div>
                                 <h3 data-i18n="projects.fearQuiz.title">Fear Quiz</h3>
@@ -130,7 +162,7 @@
                                 </p>
                                 <a class="project-link" href="https://fear-quiz.onrender.com/" target="_blank" rel="noopener noreferrer"
                                    aria-label="Jogar Fear Quiz (abre em uma nova aba)" data-i18n-aria-label="projects.fearQuiz.linkLabel">
-                                    <span data-i18n="projects.fearQuiz.link">Jogar agora</span> <span aria-hidden="true">↗</span>
+                                    <span data-i18n="projects.fearQuiz.link">Jogar agora</span> <span class="link-arrow" aria-hidden="true">↗</span>
                                 </a>
                             </div>
                         </article>
@@ -154,7 +186,7 @@
     </main>
 
     <footer class="site-footer" id="contato" aria-labelledby="contact-title">
-        <div class="contact-content">
+        <div class="contact-content" data-reveal>
             <div>
                 <p class="eyebrow" data-i18n="contact.eyebrow">Contato</p>
                 <h2 id="contact-title" data-i18n="contact.title">Vamos conversar?</h2>
@@ -166,11 +198,11 @@
                    data-i18n-aria-label="contact.emailLabel">alexanderrevoredo@gmail.com</a>
                 <a href="https://www.linkedin.com/in/alex-revolkov/" target="_blank" rel="noopener noreferrer"
                    aria-label="LinkedIn de Alexander Revoredo (abre em uma nova aba)" data-i18n-aria-label="contact.linkedinLabel">
-                    <span data-i18n="contact.linkedin">LinkedIn</span> <span aria-hidden="true">↗</span>
+                    <span data-i18n="contact.linkedin">LinkedIn</span> <span class="link-arrow" aria-hidden="true">↗</span>
                 </a>
                 <a href="https://github.com/AlexanderRevoredo" target="_blank" rel="noopener noreferrer"
                    aria-label="GitHub de Alexander Revoredo (abre em uma nova aba)" data-i18n-aria-label="contact.githubLabel">
-                    <span data-i18n="contact.github">GitHub</span> <span aria-hidden="true">↗</span>
+                    <span data-i18n="contact.github">GitHub</span> <span class="link-arrow" aria-hidden="true">↗</span>
                 </a>
             </address>
         </div>

@@ -4,6 +4,7 @@
 
     const translations = {
         pt: {
+            "a11y.skipToContent": "Pular para o conteúdo",
             "meta.description": "Portfólio de Alexander Revoredo, desenvolvedor em aprendizado.",
             "meta.title": "Alexander Revoredo | Portfólio",
             "nav.main": "Navegação principal",
@@ -37,6 +38,14 @@
             "projects.home.body": "Projeto pessoal Revolkov Home. Consulte o repositório para conhecer o código e acompanhar os detalhes do projeto.",
             "projects.home.link": "Ver repositório",
             "projects.home.linkLabel": "Repositório do Revolkov Home no GitHub (abre em uma nova aba)",
+            "projects.home.image1Alt": "Captura de tela do Revolkov Home com plano de fundo futurista",
+            "projects.home.image2Alt": "Captura de tela do Revolkov Home com plano de fundo de anime",
+            "projects.home.image3Alt": "Captura de tela do Revolkov Home com plano de fundo de central de monitores",
+            "projects.carousel.prevLabel": "Imagem anterior",
+            "projects.carousel.nextLabel": "Próxima imagem",
+            "projects.carousel.dot1": "Ver imagem 1 de 3",
+            "projects.carousel.dot2": "Ver imagem 2 de 3",
+            "projects.carousel.dot3": "Ver imagem 3 de 3",
             "projects.fearQuiz.title": "Fear Quiz",
             "projects.fearQuiz.body": "Quiz de terror atmosférico, com efeitos sonoros, trilha imersiva e tema visual sombrio — melhor experiência com fones de ouvido e em tela cheia.",
             "projects.fearQuiz.imageAlt": "Captura de tela do Fear Quiz",
@@ -56,6 +65,7 @@
             "footer.note": "Feito com dedicação e vontade de aprender."
         },
         en: {
+            "a11y.skipToContent": "Skip to content",
             "meta.description": "Portfolio of Alexander Revoredo, a software development student.",
             "meta.title": "Alexander Revoredo | Portfolio",
             "nav.main": "Main navigation",
@@ -89,6 +99,14 @@
             "projects.home.body": "Revolkov Home is a personal project. Visit the repository to explore the code and follow the project's details.",
             "projects.home.link": "View repository",
             "projects.home.linkLabel": "Revolkov Home repository on GitHub (opens in a new tab)",
+            "projects.home.image1Alt": "Revolkov Home screenshot with a futuristic wallpaper",
+            "projects.home.image2Alt": "Revolkov Home screenshot with an anime wallpaper",
+            "projects.home.image3Alt": "Revolkov Home screenshot with a multi-monitor command center wallpaper",
+            "projects.carousel.prevLabel": "Previous image",
+            "projects.carousel.nextLabel": "Next image",
+            "projects.carousel.dot1": "View image 1 of 3",
+            "projects.carousel.dot2": "View image 2 of 3",
+            "projects.carousel.dot3": "View image 3 of 3",
             "projects.fearQuiz.title": "Fear Quiz",
             "projects.fearQuiz.body": "An atmospheric horror quiz with sound effects, immersive audio, and a dark visual theme — best experienced with headphones and in full screen.",
             "projects.fearQuiz.imageAlt": "Screenshot of Fear Quiz",

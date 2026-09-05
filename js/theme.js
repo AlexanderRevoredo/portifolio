@@ -24,6 +24,13 @@
 
     document.documentElement.dataset.theme = initialTheme;
 
+    const updateThemeColorMeta = (theme) => {
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute("content", theme === "dark" ? "#0e1220" : "#f6f7fb");
+    };
+
+    updateThemeColorMeta(initialTheme);
+
     document.addEventListener("DOMContentLoaded", () => {
         const button = document.querySelector(".theme-toggle");
         if (!button) return;
@@ -48,6 +55,7 @@
             document.documentElement.dataset.theme = nextTheme;
             saveTheme(nextTheme);
             updateButton(nextTheme);
+            updateThemeColorMeta(nextTheme);
         });
 
         document.addEventListener("portfolio:languagechange", () => {
